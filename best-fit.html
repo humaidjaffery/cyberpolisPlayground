@@ -1,0 +1,55 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playground</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body>
+
+    <div>
+        <p class="text-2xl font-bold text-center">What is linear regression</p>
+        <p>The end goal of linear regression is to find a linear (straight) line that best describes a relationship between input variables (called <i>features</i>) and an output variable (the <i>target</i>). For instance, if we wanted to predict the number of people riding bikes, we might use inputs such as temperature or traffic</p>
+        <p>This process uses an existing <i>labeled dataset</i> (a dataset where both the inputs and the correct outputs are provided) to find a <span class="font-bold">best-fit line</span>. The best-fit line is as close as possible to all the data points in the dataset, or in other words "best-fits" the data (hence the name). This line helps us understand the relationship between the inputs (e.g., temperature) and the output (e.g., number of bikes) and allows us to make predictions for new inputs.</p>
+    </div>       
+    
+    <div class="my-5">
+         <p class="font-bold text-2xl text-center">Best-fit line graphed</p>
+         <img class="mx-auto" src="https://dulpe9vok4m1x.cloudfront.net/ac5e/ac5e-d87f/0_bikes_temperature_graph.png">
+         <p>In the graph above, the red line (the <i>“best-fit” line</i>) is is <b>trained</b> to specifically to fit the data points. Once found, we can use this line to predict the number of bikes for any temperature that previously didn’t have a data point. For example, we can predict that at 40 degrees, there will be about 1,500 bikes, as indicated by the line. This prediction is exactly the end goal of linear regression.</p>
+    </div>
+
+    <div>
+        <p class="font-bold text-2xl text-center"> Best-fit line Formula </p>
+        <p>But how do we describe this line in mathematical terms? The <i>best-fit line</i> can described by the a simple linear function:</p> 
+        <div data-katex="f(x) = wx + b" data-display="true"></div>
+        <ul class="ml-5">
+          <li class="ml-5"><i>w</i> is the slope of the line (indicating the rate of change or steepness of the line)</li>
+          <li><i>b</i> is the y-intercept (the point where the line crosses the y-axis or how shifted up the line is)</li>
+          <li><i>x</i> is the input variable (the temperature) </li>
+          <li><i>f(x) or y</i> is the predicted output (number of bikes)</li>
+        </ul>
+        <p class="mt-1 text-center">For the graph above, the equation might look like: </p> 
+        <div data-katex="f = 0.6x + 200" data-display="true"></div>
+        <p class="text-center"> where <i>w = 0.6</i> and <i>b = 200</i></p>
+    </div>
+
+    <div>
+        <p class="font-bold text-2xl text-center"> Coefficients </p>
+        <p>Both w and b are <b>Coefficients</b> that we find through training (will be explained in later modules) The function is adjusted by tweaking both <i>w</i> and <i>b</i> until the line comes as close as possible to all the data points. This makes the best-fit line as accurate as possible in representing the trend or correlation in the data, allowing us to make reliable predictions.</p>
+    </div>
+    
+    <img class="w-3/4 mx-auto" src="https://dulpe9vok4m1x.cloudfront.net/ac5e/ac5e-d87f/1_lintrans.gif">
+
+
+    <!-- <div class="outline rounded-md p-3 text-center mx-3">
+        <p class="font-bold text-xl"> Multivariate or polynomial regression </p>
+        <h1 class="ml-1">The formula f = wx+b is a simple base example of a linear regression function which we'll be working with throughout this course. But, Linear regression functions sometimes need to be more complex to be able to fit the data correctly. </h1>
+        <h1>The function can have multiple input (<i>x</i>) variables that need to be considered (e.g. we also factor in the traffic with temperature in the example above). The function would then look like this: <div data-katex="'f = w_1x_1 + w_2x_2 + b'" ></div></h1>
+        <h1>Sometimes, when a relationship can not be "best-fit" with just a linear line, <span class="font-bold">Polynomial Regression</span> can be used, which just uses non-linear functions instead of just x. For example:  
+            <div data-katex="'f = wx^2 + b'" ></div> or
+            <div data-katex="'f = wsin(x) + b'" ></div>
+        </h1>
+        <h1 class="mt-1">For this course, we are just focusing on the basics with a <span class="font-bold">one-input linear</span> regression model, but what you learn here can be easily generalized to more complex multi-input or polynomial regression models</h1>
+    </div> -->
+
+</body>
